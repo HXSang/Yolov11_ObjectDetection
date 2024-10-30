@@ -21,11 +21,11 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 <table align="center">
   <tr>
     <td align="center">
-      <img src="/data/1212.jpg" alt="Sample Image 1" width="300"/>
+      <img src="/data/1212.jpg" alt="Input Image" width="500"/>
       <br>Input Image
     </td>
     <td align="center">
-      <img src="images/1212.jpg" alt="Sample Image 2" width="300"/>
+      <img src="images/1212.jpg" alt="Output Image" width="500"/>
       <br>Output Image
     </td>
   </tr>
