@@ -30,6 +30,7 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 ├── images/                   # Thư mục lưu trữ ảnh sau khi đã phát hiện và thêm chú thích
 ├── yolo11m_trained.pt        # Tệp mô hình YOLO đã huấn luyện
 ├── main.py                   # Mã nguồn chính
+├── requirements              # Thư viện cần dùng
 └── README.md                 # Hướng dẫn sử dụng và mô tả dự án
 ```
 
@@ -44,7 +45,8 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 2. **Cài đặt các thư viện cần thiết**:
    Sử dụng `pip` để cài đặt các thư viện:
    ```bash
-   pip install opencv-python-headless ultralytics supervision
+   pip install opencv-python ultralytics supervision
+   pip install requirements.txt
    ```
 
 3. **Chuẩn bị mô hình YOLO**:
