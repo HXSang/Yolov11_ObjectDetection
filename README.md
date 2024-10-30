@@ -22,7 +22,7 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
   <img src="/data/1212.jpg" alt="Sample Image 1" width="300" style="display: inline-block; margin-right: 10px;"/>
   <img src="images/1212.jpg" alt="Sample Image 2" width="300" style="display: inline-block;"/>
 </p>
-<p align="center">Sample Image 1 &nbsp;&nbsp;&nbsp;&nbsp; Sample Image 2</p>
+<p align="center">Input Image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output Image </p>
 
 
 
