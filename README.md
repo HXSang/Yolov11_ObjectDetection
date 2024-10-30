@@ -18,9 +18,16 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 
 
 ## Ví dụ về kết quả
+</p>
 <p align="center">
-  <img src="/data/1212.jpg" alt="Input Image" width="300"/>
-  <img src="images/1212.jpg" alt="Output Image" width="300"/>
+  <figure style="display: inline-block; margin: 0 10px;">
+    <img src="/data/1212.jpg" alt="" width="300"/>
+    <figcaption>Input Image</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 0 10px;">
+      <img src="images/1212.jpg" alt="" width="300"/>
+    <figcaption>Output Image</figcaption>
+  </figure>
 </p>
 
 
