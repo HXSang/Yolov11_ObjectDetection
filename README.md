@@ -1,22 +1,22 @@
-# YOLO Object Detection with OpenCV and Supervision
+### YOLO Object Detection with OpenCV and Supervision
 
 # Description
-This project utilizes the YOLO model to perform object detection in images, creating bounding boxes around detected objects and adding confidence labels for each object. YOLO's high accuracy and performance make it ideal for real-time object detection applications. Combined with a custom dataset, this project aims to detect and classify defects in electronic components during manufacturing and assembly. The dataset includes images of circuit boards with various defect types, assisting AI engineers and developers in training models for automated defect detection and diagnosis, ultimately enhancing quality control efficiency and accuracy.
+This project leverages the YOLO model to detect objects within images, drawing bounding boxes around each detected object and adding confidence labels. The high accuracy and performance of YOLO make it ideal for real-time object detection applications. Using a custom dataset, the project aims to detect and classify defects in electronic components during manufacturing and assembly. The dataset includes images of circuit boards with various defect types, enabling AI engineers and developers to train models for automated defect detection and diagnosis, ultimately improving the efficiency and accuracy of quality control processes.
 
-Contents
-This dataset contains images of electronic circuit boards captured in a production testing environment. Defects are categorized into five distinct types:
+# Contents
+The dataset contains images of electronic circuit boards captured in a production testing environment, with defects categorized into five distinct types:
 
-- Defect 0 - Surface scratches on the circuit board
-- Defect 1 - Scratches on component surfaces
-- Defect 2 - Missing components
-- Defect 3 - Damaged components
-- Defect 4 - Solder joint or pin defects
-Data Format
-Images: Each image includes circuit boards with defect regions highlighted by bounding boxes in various colors, representing each defect type.
-Annotations: Accompanying annotation files (in CSV or JSON format) provide detailed information on the location and type of defect for each image.
+- **Defect 0** - Surface scratches on the circuit board
+- **Defect 1** - Scratches on component surfaces
+- **Defect 2** - Missing components
+- **Defect 3** - Damaged components
+- **Defect 4** - Solder joint or pin defects
 
+# Data Format
+- **Images**: Each image contains circuit boards with defect regions marked by bounding boxes in different colors, representing each defect type.
+- **Annotations**: Accompanying annotation files (in CSV or JSON format) provide detailed information on the location and type of defect for each image.
 
-## Result example
+# Result Example
 <table align="center">
   <tr>
     <td align="center">
@@ -30,56 +30,56 @@ Annotations: Accompanying annotation files (in CSV or JSON format) provide detai
   </tr>
 </table>
 
-## Libraries used
-- **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
-- **YOLO (Ultralytics)**: Mô hình phát hiện đối tượng nhanh và chính xác.
-- **Supervision**: Hỗ trợ thêm chú thích (annotations) cho ảnh.
+# Libraries Used
+- **OpenCV**: A powerful library for image and video processing.
+- **YOLO (Ultralytics)**: A fast and accurate object detection model.
+- **Supervision**: Provides annotation support for images.
 
-## Cấu trúc dự án
+# Project Structure
 ```
-├── data/                     # Thư mục chứa ảnh đầu vào cần xử lý
-├── images/                   # Thư mục lưu trữ ảnh sau khi đã phát hiện và thêm chú thích
-├── yolo11m_trained.pt        # Tệp mô hình YOLO đã huấn luyện
-├── main.py                   # Mã nguồn chính
-├── requirements              # Thư viện cần dùng
-└── README.md                 # Hướng dẫn sử dụng và mô tả dự án
+├── data/                     # Folder containing input images to be processed
+├── images/                   # Folder for saving processed images with annotations
+├── yolo11m_trained.pt        # Pre-trained YOLO model file
+├── main.py                   # Main source code
+├── requirements.txt          # Required libraries
+└── README.md                 # Project documentation and instructions
 ```
 
-## Cài đặt
+# Installation
 
-1. **Clone repository về máy**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/HXSang/Yolov11_ObjectDetection.git
    cd Yolov11_ObjectDetection
    ```
 
-2. **Cài đặt các thư viện cần thiết**:
-   Sử dụng `pip` để cài đặt các thư viện:
+2. **Install the required libraries**:
+   Use `pip` to install the necessary packages:
    ```bash
    pip install opencv-python ultralytics supervision
-   pip install requirements.txt
+   pip install -r requirements.txt
    ```
 
-3. **Chuẩn bị mô hình YOLO**:
-   - Tải mô hình YOLO đã huấn luyện (`yolo11m_trained.pt`) và đặt vào thư mục dự án.
+3. **Prepare the YOLO model**:
+   - Download the pre-trained YOLO model (`yolo11m_trained.pt`) and place it in the project folder.
 
-## Cách sử dụng
+# Usage
 
-- Đặt ảnh đầu vào trong thư mục `data/`.
-- Chạy tệp `main.py` để bắt đầu xử lý và lưu ảnh kết quả vào thư mục `images/`.
+- Place input images in the `data/` folder.
+- Run the `main.py` file to start processing and save the output images in the `images/` folder.
 
 ```bash
 python main.py
 ```
 
-## Chi tiết mã nguồn
+# Code Details
 
-- **Tải mô hình YOLO**: Sử dụng mô hình YOLO đã huấn luyện để phát hiện đối tượng.
-- **Vẽ bounding box và nhãn**: Sử dụng OpenCV để vẽ bounding box với các màu sắc khác nhau dựa trên lớp đối tượng, và thêm nhãn cho từng đối tượng với chỉ số độ tin cậy.
-- **Xử lý hàng loạt**: Duyệt qua từng ảnh trong thư mục đầu vào, xử lý và lưu ảnh sau khi đã thêm chú thích vào thư mục đầu ra.
+- **Load YOLO Model**: Use the pre-trained YOLO model for object detection.
+- **Draw Bounding Boxes and Labels**: Use OpenCV to draw bounding boxes with different colors based on the object class and add labels for each detected object with confidence scores.
+- **Batch Processing**: Iterate through each image in the input folder, process it, and save the annotated image to the output folder.
 
-## Kết quả
-Mã sẽ xuất ra các thống kê về số lượng ảnh đã xử lý thành công và số lượng ảnh gặp lỗi trong quá trình phát hiện.
+# Results
+The script outputs statistics on the number of successfully processed images and any errors encountered during detection.
 
-## Đóng góp
-Mọi đóng góp đều được chào đón! Vui lòng tạo Pull Request hoặc mở Issue nếu bạn muốn góp ý hoặc thêm chức năng.
+# Contributions
+All contributions are welcome! Please feel free to open a Pull Request or create an Issue if you'd like to suggest enhancements or add features.
