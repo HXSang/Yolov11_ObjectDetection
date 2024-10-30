@@ -6,11 +6,11 @@ Dự án này sử dụng mô hình YOLO để thực hiện phát hiện đối
 Nội dung
 Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử được chụp trong môi trường kiểm tra sản xuất. Các lỗi được chia thành năm loại, cụ thể:
 
-Lỗi 0 - Vết trầy xước hoặc hỏng hóc trên bề mặt: Các vết xước hoặc hỏng trên bề mặt linh kiện, thường xuất hiện ở các đường nối hoặc cạnh linh kiện.
-Lỗi 1 - Hỏng hóc hoặc mất một phần linh kiện: Linh kiện bị thiếu hoặc hỏng gây ra lỗi trong hoạt động của bảng mạch.
-Lỗi 2 - Bám bẩn hoặc oxi hóa trên bề mặt linh kiện: Biểu hiện qua bề mặt xỉn màu hoặc có các mảng màu trắng do bụi bẩn hoặc oxi hóa.
-Lỗi 3 - Sai lệch về vị trí hoặc lắp đặt không chính xác: Linh kiện bị lắp lệch hoặc không đúng vị trí, gây mất kết nối hoặc giảm độ ổn định của sản phẩm.
-Lỗi 4 - Lỗi kết nối, hỏng chân hàn: Các điểm nối không được hàn chính xác, dẫn đến mất kết nối hoặc giảm chất lượng tiếp xúc điện.
+- Lỗi 0 - Vết trầy xước trên bề mặt mạch
+- Lỗi 1 - Hỏng hóc hoặc mất một phần linh kiện
+- Lỗi 2 - Bám bẩn hoặc oxi hóa trên bề mặt linh kiện
+- Lỗi 3 - Sai lệch về vị trí hoặc lắp đặt không chính xác
+- Lỗi 4 - Lỗi kết nối, hỏng chân hàn
 
 Định dạng dữ liệu
 Hình ảnh: Các hình ảnh chứa bảng mạch điện tử với các vùng lỗi được đánh dấu bằng các hộp giới hạn với màu sắc khác nhau, tượng trưng cho từng loại lỗi.
