@@ -1,4 +1,4 @@
-### YOLO Object Detection with OpenCV and Supervision
+## YOLO Object Detection with OpenCV and Supervision
 
 # Description
 This project leverages the YOLO model to detect objects within images, drawing bounding boxes around each detected object and adding confidence labels. The high accuracy and performance of YOLO make it ideal for real-time object detection applications. Using a custom dataset, the project aims to detect and classify defects in electronic components during manufacturing and assembly. The dataset includes images of circuit boards with various defect types, enabling AI engineers and developers to train models for automated defect detection and diagnosis, ultimately improving the efficiency and accuracy of quality control processes.
@@ -6,11 +6,11 @@ This project leverages the YOLO model to detect objects within images, drawing b
 # Contents
 The dataset contains images of electronic circuit boards captured in a production testing environment, with defects categorized into five distinct types:
 
-- **Defect 0** - Surface scratches on the circuit board
-- **Defect 1** - Scratches on component surfaces
-- **Defect 2** - Missing components
-- **Defect 3** - Damaged components
-- **Defect 4** - Solder joint or pin defects
+- **Lable 0** - Surface scratches on the circuit board
+- **Label 1** - Scratches on component surfaces
+- **Label 2** - Missing components
+- **Label 3** - Damaged components
+- **Label 4** - Component pin defects
 
 # Data Format
 - **Images**: Each image contains circuit boards with defect regions marked by bounding boxes in different colors, representing each defect type.
