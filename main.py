@@ -22,7 +22,7 @@ def process_image(image_path, output_path):
     frame = cv2.imread(image_path)
     if frame is None:
         print(f"Không thể đọc ảnh: {image_path}")
-        return
+        return False
     
     results = model(frame)[0]
     
@@ -39,9 +39,7 @@ def process_image(image_path, output_path):
     if len(detections) == 0:
         print(f"Không phát hiện đối tượng nào trong ảnh: {image_path}")
         cv2.imwrite(output_path, frame)
-        return
-    
-    box_annotator = sv.BoxAnnotator()
+        return True
     
     # Tạo labels
     labels = [
@@ -50,15 +48,17 @@ def process_image(image_path, output_path):
         in zip(detections.class_id, detections.confidence)
     ]
     
-    annotated_frame = box_annotator.annotate(
-        scene=frame.copy(),
-        detections=detections
-    )
-
+    # Sao chép ảnh và vẽ bounding box, label box với cùng màu
+    annotated_frame = frame.copy()
+    
     for i, (box, label) in enumerate(zip(boxes, labels)):
         x1, y1, x2, y2 = box.astype(int)
         color = COLORS[detections.class_id[i] % len(COLORS)]
         
+        # Vẽ bounding box với màu tương ứng
+        cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), color, 2)
+        
+        # Vẽ label box và text với cùng màu
         ((text_w, text_h), _) = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 1)
         cv2.rectangle(annotated_frame, (x1, y1 - 20), (x1 + text_w, y1), color, -1)
         cv2.putText(annotated_frame, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
