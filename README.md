@@ -19,9 +19,11 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 
 ## Ví dụ về kết quả
 **Input Image**
+
 <img src="/data/1212.jpg" width="500"/>
 
 **Output Image**
+
 <img src="/images/1212.jpg" width="500"/>
 
 ## Các thư viện sử dụng
