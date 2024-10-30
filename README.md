@@ -18,13 +18,18 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 
 
 ## Ví dụ về kết quả
-<p align="center">
-  <img src="/data/1212.jpg" alt="Sample Image 1" width="300" style="display: inline-block; margin-right: 10px;"/>
-  <img src="images/1212.jpg" alt="Sample Image 2" width="300" style="display: inline-block;"/>
-</p>
-<p align="center">Input Image            Output Image </p>
-
-
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="/data/1212.jpg" alt="Sample Image 1" width="300"/>
+      <br>Input Image
+    </td>
+    <td align="center">
+      <img src="images/1212.jpg" alt="Sample Image 2" width="300"/>
+      <br>Output Image
+    </td>
+  </tr>
+</table>
 
 ## Các thư viện sử dụng
 - **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
