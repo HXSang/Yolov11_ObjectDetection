@@ -19,6 +19,13 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 - Tệp chú thích: Các tệp chú thích đi kèm (ở định dạng CSV hoặc JSON) chứa thông tin chi tiết về vị trí và loại lỗi cho từng hình ảnh.
 
 
+## Ví dụ về kết quả
+**Input Image**
+https://github.com/HXSang/Yolov11_ObjectDetection/blob/main/data/1212.jpg
+
+**Output Image**
+https://github.com/HXSang/Yolov11_ObjectDetection/blob/main/images/1212.jpg
+
 ## Các thư viện sử dụng
 - **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
 - **YOLO (Ultralytics)**: Mô hình phát hiện đối tượng nhanh và chính xác.
