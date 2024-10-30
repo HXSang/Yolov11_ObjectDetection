@@ -18,13 +18,13 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 
 
 ## Ví dụ về kết quả
-**Input Image**
+**Input Image**                                                                                        **Output Image**
 
-<img src="/data/1212.jpg" width="500"/>
+<img src="/data/1212.jpg" width="500"/>                                                                <img src="/images/1212.jpg" width="500"/>
 
-**Output Image**
 
-<img src="/images/1212.jpg" width="500"/>
+
+
 
 ## Các thư viện sử dụng
 - **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
