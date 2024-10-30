@@ -79,7 +79,31 @@ python main.py
 - **Batch Processing**: Iterate through each image in the input folder, process it, and save the annotated image to the output folder.
 
 # Results
-The script outputs statistics on the number of successfully processed images and any errors encountered during detection.
+Model Summary
+
+- Architecture: YOLOv11m (fused)
+- Layers: 303
+- Parameters: 20,033,887
+- GFLOPs: 67.7
+- Gradients: 0
+- Performance Metrics
+
+Class	Images	Instances	Box Precision (P)	Recall (R)	mAP50	mAP50-95
+All	840	7961	0.991	0.989	0.993	0.751
+0	793	1589	0.975	0.955	0.991	0.738
+1	749	1265	0.994	0.996	0.993	0.781
+2	791	1960	0.991	0.998	0.992	0.741
+3	774	1713	0.999	0.999	0.995	0.744
+4	683	1434	0.996	0.997	0.994	0.751
+
+Inference Speed
+- Preprocessing Time: 0.2 ms
+- Inference Time: 12.0 ms
+- Loss Calculation Time: 0.0 ms
+- Postprocessing Time: 1.1 ms per image
+
+Results Storage
+The results have been saved to the directory: runs/detect/train.
 
 # Contributions
 All contributions are welcome! Please feel free to open a Pull Request or create an Issue if you'd like to suggest enhancements or add features.
