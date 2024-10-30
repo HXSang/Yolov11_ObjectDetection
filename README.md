@@ -6,11 +6,11 @@ Dự án này sử dụng mô hình YOLO để thực hiện phát hiện đối
 Nội dung
 Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử được chụp trong môi trường kiểm tra sản xuất. Các lỗi được chia thành năm loại, cụ thể:
 
-- Lỗi 0 - Vết trầy xước trên bề mặt bo
-- Lỗi 1 - Trầy xước trên bề mặt mạch
+- Lỗi 0 - Vết trầy xước trên bề mặt mạch
+- Lỗi 1 - Trầy xước trên bề mặt linh kiện
 - Lỗi 2 - Thiếu linh kiện
-- Lỗi 3 - Hư linh kiện
-- Lỗi 4 - Lỗi kết nối, hỏng chân hàn
+- Lỗi 3 - Hỏng linh kiện
+- Lỗi 4 - Lỗi chân hàn, chân linh kiện
 
 Định dạng dữ liệu
 - Hình ảnh: Các hình ảnh chứa bảng mạch điện tử với các vùng lỗi được đánh dấu bằng các hộp giới hạn với màu sắc khác nhau, tượng trưng cho từng loại lỗi.
