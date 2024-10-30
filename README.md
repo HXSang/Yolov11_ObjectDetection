@@ -39,7 +39,7 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 1. **Clone repository về máy**:
    ```bash
    git clone https://github.com/HXSang/Yolov11_ObjectDetection.git
-   cd yolo-object-detection
+   cd Yolov11_ObjectDetection
    ```
 
 2. **Cài đặt các thư viện cần thiết**:
