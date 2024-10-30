@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import supervision as sv
 
 # Tải model YOLO
-model = YOLO("C:/Users/DELL/Downloads/CV/Yolo11_ObjectDetection/yolo11m_trained.pt")
+model = YOLO("../yolo11m_trained.pt")
 
 COLORS = [
     (255, 0, 0),    
@@ -71,10 +71,10 @@ def process_image(image_path, output_path):
         print(f"Lỗi khi lưu ảnh {output_path}: {str(e)}")
         return False
 
-output_folder = "C:/Users/DELL/Downloads/CV/Yolo11_ObjectDetection/images"
+output_folder = "../images"
 os.makedirs(output_folder, exist_ok=True)
 
-input_folder = "C:/Users/DELL/Downloads/CV/Yolo11_ObjectDetection/data"
+input_folder = "../data"
 processed_count = 0
 error_count = 0
 
