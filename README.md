@@ -13,10 +13,11 @@ Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử �
 - Lỗi 4 - Lỗi kết nối, hỏng chân hàn
 
 Định dạng dữ liệu
-'''
-Hình ảnh: Các hình ảnh chứa bảng mạch điện tử với các vùng lỗi được đánh dấu bằng các hộp giới hạn với màu sắc khác nhau, tượng trưng cho từng loại lỗi.
-Tệp chú thích: Các tệp chú thích đi kèm (ở định dạng CSV hoặc JSON) chứa thông tin chi tiết về vị trí và loại lỗi cho từng hình ảnh.
-'''
+
+
+- Hình ảnh: Các hình ảnh chứa bảng mạch điện tử với các vùng lỗi được đánh dấu bằng các hộp giới hạn với màu sắc khác nhau, tượng trưng cho từng loại lỗi.
+- Tệp chú thích: Các tệp chú thích đi kèm (ở định dạng CSV hoặc JSON) chứa thông tin chi tiết về vị trí và loại lỗi cho từng hình ảnh.
+
 
 ## Các thư viện sử dụng
 - **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
