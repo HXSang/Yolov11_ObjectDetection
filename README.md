@@ -88,13 +88,15 @@ Model Summary
 - Gradients: 0
 - Performance Metrics
 
-Class	Images	Instances	Box Precision (P)	Recall (R)	mAP50	mAP50-95
-All	840	7961	0.991	0.989	0.993	0.751
-0	793	1589	0.975	0.955	0.991	0.738
-1	749	1265	0.994	0.996	0.993	0.781
-2	791	1960	0.991	0.998	0.992	0.741
-3	774	1713	0.999	0.999	0.995	0.744
-4	683	1434	0.996	0.997	0.994	0.751
+| Class | Images | Instances | Box Precision (P) | Recall (R) | mAP50 | mAP50-95 |
+|-------|--------|-----------|--------------------|------------|-------|----------|
+| All   | 840    | 7961      | 0.991              | 0.989      | 0.993 | 0.751    |
+| 0     | 793    | 1589      | 0.975              | 0.955      | 0.991 | 0.738    |
+| 1     | 749    | 1265      | 0.994              | 0.996      | 0.993 | 0.781    |
+| 2     | 791    | 1960      | 0.991              | 0.998      | 0.992 | 0.741    |
+| 3     | 774    | 1713      | 0.999              | 0.999      | 0.995 | 0.744    |
+| 4     | 683    | 1434      | 0.996              | 0.997      | 0.994 | 0.751    |
+
 
 Inference Speed
 - Preprocessing Time: 0.2 ms
@@ -103,6 +105,7 @@ Inference Speed
 - Postprocessing Time: 1.1 ms per image
 
 Results Storage
+
 The results have been saved to the directory: runs/detect/train.
 
 # Contributions
