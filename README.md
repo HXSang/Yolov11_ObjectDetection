@@ -34,7 +34,7 @@ Tệp chú thích: Các tệp chú thích đi kèm (ở định dạng CSV hoặ
 
 1. **Clone repository về máy**:
    ```bash
-   [git clone https://github.com/HXSang/Yolov11_ObjectDetection.git]
+   git clone https://github.com/HXSang/Yolov11_ObjectDetection.git
    cd yolo-object-detection
    ```
 
