@@ -1,7 +1,20 @@
 # YOLO Object Detection with OpenCV and Supervision
 
 ## Mô tả
-Dự án này sử dụng mô hình YOLO để thực hiện phát hiện đối tượng trong ảnh, tạo bounding box xung quanh các đối tượng được phát hiện và thêm nhãn chỉ số độ tin cậy cho từng đối tượng. Mô hình YOLO giúp dự án đạt được độ chính xác và hiệu suất cao, phù hợp cho các ứng dụng phát hiện đối tượng trong thời gian thực.
+Dự án này sử dụng mô hình YOLO để thực hiện phát hiện đối tượng trong ảnh, tạo bounding box xung quanh các đối tượng được phát hiện và thêm nhãn chỉ số độ tin cậy cho từng đối tượng. Mô hình YOLO giúp dự án đạt được độ chính xác và hiệu suất cao, phù hợp cho các ứng dụng phát hiện đối tượng trong thời gian thực.Kết hợp với bộ dữ liệu được xây dựng nhằm mục đích phát hiện và phân loại các lỗi linh kiện điện tử trong sản xuất và lắp ráp. Bộ dữ liệu bao gồm hình ảnh các bảng mạch với các loại lỗi khác nhau, giúp các kỹ sư và nhà phát triển trong lĩnh vực trí tuệ nhân tạo huấn luyện mô hình phát hiện và chẩn đoán lỗi tự động, góp phần cải thiện hiệu quả và độ chính xác trong quy trình kiểm tra chất lượng sản phẩm.
+
+Nội dung
+Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử được chụp trong môi trường kiểm tra sản xuất. Các lỗi được chia thành năm loại, cụ thể:
+
+Lỗi 0 - Vết trầy xước hoặc hỏng hóc trên bề mặt: Các vết xước hoặc hỏng trên bề mặt linh kiện, thường xuất hiện ở các đường nối hoặc cạnh linh kiện.
+Lỗi 1 - Hỏng hóc hoặc mất một phần linh kiện: Linh kiện bị thiếu hoặc hỏng gây ra lỗi trong hoạt động của bảng mạch.
+Lỗi 2 - Bám bẩn hoặc oxi hóa trên bề mặt linh kiện: Biểu hiện qua bề mặt xỉn màu hoặc có các mảng màu trắng do bụi bẩn hoặc oxi hóa.
+Lỗi 3 - Sai lệch về vị trí hoặc lắp đặt không chính xác: Linh kiện bị lắp lệch hoặc không đúng vị trí, gây mất kết nối hoặc giảm độ ổn định của sản phẩm.
+Lỗi 4 - Lỗi kết nối, hỏng chân hàn: Các điểm nối không được hàn chính xác, dẫn đến mất kết nối hoặc giảm chất lượng tiếp xúc điện.
+
+Định dạng dữ liệu
+Hình ảnh: Các hình ảnh chứa bảng mạch điện tử với các vùng lỗi được đánh dấu bằng các hộp giới hạn với màu sắc khác nhau, tượng trưng cho từng loại lỗi.
+Tệp chú thích: Các tệp chú thích đi kèm (ở định dạng CSV hoặc JSON) chứa thông tin chi tiết về vị trí và loại lỗi cho từng hình ảnh.
 
 ## Các thư viện sử dụng
 - **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
