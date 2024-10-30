@@ -21,7 +21,7 @@ Dự án này sử dụng mô hình YOLO để thực hiện phát hiện đối
 
 1. **Clone repository về máy**:
    ```bash
-   git clone https://github.com/tennguoidung/yolo-object-detection.git
+   [git clone https://github.com/HXSang/Yolov11_ObjectDetection.git]
    cd yolo-object-detection
    ```
 
