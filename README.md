@@ -104,9 +104,5 @@ Inference Speed
 - Loss Calculation Time: 0.0 ms
 - Postprocessing Time: 1.1 ms per image
 
-Results Storage
-
-The results have been saved to the directory: runs/detect/train.
-
 # Contributions
 All contributions are welcome! Please feel free to open a Pull Request or create an Issue if you'd like to suggest enhancements or add features.
