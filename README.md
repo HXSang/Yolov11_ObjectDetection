@@ -1,37 +1,36 @@
 # YOLO Object Detection with OpenCV and Supervision
 
-## Mô tả
-Dự án này sử dụng mô hình YOLO để thực hiện phát hiện đối tượng trong ảnh, tạo bounding box xung quanh các đối tượng được phát hiện và thêm nhãn chỉ số độ tin cậy cho từng đối tượng. Mô hình YOLO giúp dự án đạt được độ chính xác và hiệu suất cao, phù hợp cho các ứng dụng phát hiện đối tượng trong thời gian thực.Kết hợp với bộ dữ liệu được xây dựng nhằm mục đích phát hiện và phân loại các lỗi linh kiện điện tử trong sản xuất và lắp ráp. Bộ dữ liệu bao gồm hình ảnh các bảng mạch với các loại lỗi khác nhau, giúp các kỹ sư và nhà phát triển trong lĩnh vực trí tuệ nhân tạo huấn luyện mô hình phát hiện và chẩn đoán lỗi tự động, góp phần cải thiện hiệu quả và độ chính xác trong quy trình kiểm tra chất lượng sản phẩm.
+# Description
+This project utilizes the YOLO model to perform object detection in images, creating bounding boxes around detected objects and adding confidence labels for each object. YOLO's high accuracy and performance make it ideal for real-time object detection applications. Combined with a custom dataset, this project aims to detect and classify defects in electronic components during manufacturing and assembly. The dataset includes images of circuit boards with various defect types, assisting AI engineers and developers in training models for automated defect detection and diagnosis, ultimately enhancing quality control efficiency and accuracy.
 
-Nội dung
-Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử được chụp trong môi trường kiểm tra sản xuất. Các lỗi được chia thành năm loại, cụ thể:
+Contents
+This dataset contains images of electronic circuit boards captured in a production testing environment. Defects are categorized into five distinct types:
 
-- Lỗi 0 - Vết trầy xước trên bề mặt mạch
-- Lỗi 1 - Trầy xước trên bề mặt linh kiện
-- Lỗi 2 - Thiếu linh kiện
-- Lỗi 3 - Hỏng linh kiện
-- Lỗi 4 - Lỗi chân hàn, chân linh kiện
+- Defect 0 - Surface scratches on the circuit board
+- Defect 1 - Scratches on component surfaces
+- Defect 2 - Missing components
+- Defect 3 - Damaged components
+- Defect 4 - Solder joint or pin defects
+Data Format
+Images: Each image includes circuit boards with defect regions highlighted by bounding boxes in various colors, representing each defect type.
+Annotations: Accompanying annotation files (in CSV or JSON format) provide detailed information on the location and type of defect for each image.
 
-Định dạng dữ liệu
-- Hình ảnh: Các hình ảnh chứa bảng mạch điện tử với các vùng lỗi được đánh dấu bằng các hộp giới hạn với màu sắc khác nhau, tượng trưng cho từng loại lỗi.
-- Tệp chú thích: Các tệp chú thích đi kèm (ở định dạng CSV hoặc JSON) chứa thông tin chi tiết về vị trí và loại lỗi cho từng hình ảnh.
 
-
-## Ví dụ về kết quả
+## Result example
 <table align="center">
   <tr>
     <td align="center">
-      <img src="/data/1212.jpg" alt="Input Image" width="500"/>
+      <img src="/data/2604_2.png" alt="Input Image" width="500"/>
       <br>Input Image
     </td>
     <td align="center">
-      <img src="images/1212.jpg" alt="Output Image" width="500"/>
+      <img src="images/2604_2.png" alt="Output Image" width="500"/>
       <br>Output Image
     </td>
   </tr>
 </table>
 
-## Các thư viện sử dụng
+## Libraries used
 - **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
 - **YOLO (Ultralytics)**: Mô hình phát hiện đối tượng nhanh và chính xác.
 - **Supervision**: Hỗ trợ thêm chú thích (annotations) cho ảnh.
