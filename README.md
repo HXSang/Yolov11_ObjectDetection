@@ -1,86 +1,108 @@
-# YOLO Object Detection with OpenCV and Supervision
+## YOLO Object Detection with OpenCV and Supervision
 
-## Mô tả
-Dự án này sử dụng mô hình YOLO để thực hiện phát hiện đối tượng trong ảnh, tạo bounding box xung quanh các đối tượng được phát hiện và thêm nhãn chỉ số độ tin cậy cho từng đối tượng. Mô hình YOLO giúp dự án đạt được độ chính xác và hiệu suất cao, phù hợp cho các ứng dụng phát hiện đối tượng trong thời gian thực.Kết hợp với bộ dữ liệu được xây dựng nhằm mục đích phát hiện và phân loại các lỗi linh kiện điện tử trong sản xuất và lắp ráp. Bộ dữ liệu bao gồm hình ảnh các bảng mạch với các loại lỗi khác nhau, giúp các kỹ sư và nhà phát triển trong lĩnh vực trí tuệ nhân tạo huấn luyện mô hình phát hiện và chẩn đoán lỗi tự động, góp phần cải thiện hiệu quả và độ chính xác trong quy trình kiểm tra chất lượng sản phẩm.
+# Description
+This project leverages the YOLO model to detect objects within images, drawing bounding boxes around each detected object and adding confidence labels. The high accuracy and performance of YOLO make it ideal for real-time object detection applications. Using a custom dataset, the project aims to detect and classify defects in electronic components during manufacturing and assembly. The dataset includes images of circuit boards with various defect types, enabling AI engineers and developers to train models for automated defect detection and diagnosis, ultimately improving the efficiency and accuracy of quality control processes.
 
-Nội dung
-Bộ dữ liệu này chứa hình ảnh của các bảng mạch điện tử được chụp trong môi trường kiểm tra sản xuất. Các lỗi được chia thành năm loại, cụ thể:
+# Contents
+The dataset contains images of electronic circuit boards captured in a production testing environment, with defects categorized into five distinct types:
 
-- Lỗi 0 - Vết trầy xước trên bề mặt mạch
-- Lỗi 1 - Trầy xước trên bề mặt linh kiện
-- Lỗi 2 - Thiếu linh kiện
-- Lỗi 3 - Hỏng linh kiện
-- Lỗi 4 - Lỗi chân hàn, chân linh kiện
+- **Lable 0** - Surface scratches on the circuit board
+- **Label 1** - Scratches on component surfaces
+- **Label 2** - Missing components
+- **Label 3** - Damaged components
+- **Label 4** - Component pin defects
 
-Định dạng dữ liệu
-- Hình ảnh: Các hình ảnh chứa bảng mạch điện tử với các vùng lỗi được đánh dấu bằng các hộp giới hạn với màu sắc khác nhau, tượng trưng cho từng loại lỗi.
-- Tệp chú thích: Các tệp chú thích đi kèm (ở định dạng CSV hoặc JSON) chứa thông tin chi tiết về vị trí và loại lỗi cho từng hình ảnh.
+# Data Format
+- **Images**: Each image contains circuit boards with defect regions marked by bounding boxes in different colors, representing each defect type.
+- **Annotations**: Accompanying annotation files (in CSV or JSON format) provide detailed information on the location and type of defect for each image.
 
-
-## Ví dụ về kết quả
+# Result Example
 <table align="center">
   <tr>
     <td align="center">
-      <img src="/data/1212.jpg" alt="Input Image" width="500"/>
+      <img src="/data/2604_2.png" alt="Input Image" width="500"/>
       <br>Input Image
     </td>
     <td align="center">
-      <img src="images/1212.jpg" alt="Output Image" width="500"/>
+      <img src="images/2604_2.png" alt="Output Image" width="500"/>
       <br>Output Image
     </td>
   </tr>
 </table>
 
-## Các thư viện sử dụng
-- **OpenCV**: Thư viện xử lý ảnh và video mạnh mẽ.
-- **YOLO (Ultralytics)**: Mô hình phát hiện đối tượng nhanh và chính xác.
-- **Supervision**: Hỗ trợ thêm chú thích (annotations) cho ảnh.
+# Libraries Used
+- **OpenCV**: A powerful library for image and video processing.
+- **YOLO (Ultralytics)**: A fast and accurate object detection model.
+- **Supervision**: Provides annotation support for images.
 
-## Cấu trúc dự án
+# Project Structure
 ```
-├── data/                     # Thư mục chứa ảnh đầu vào cần xử lý
-├── images/                   # Thư mục lưu trữ ảnh sau khi đã phát hiện và thêm chú thích
-├── yolo11m_trained.pt        # Tệp mô hình YOLO đã huấn luyện
-├── main.py                   # Mã nguồn chính
-├── requirements              # Thư viện cần dùng
-└── README.md                 # Hướng dẫn sử dụng và mô tả dự án
+├── data/                     # Folder containing input images to be processed
+├── images/                   # Folder for saving processed images with annotations
+├── yolo11m_trained.pt        # Pre-trained YOLO model file
+├── main.py                   # Main source code
+├── requirements.txt          # Required libraries
+└── README.md                 # Project documentation and instructions
 ```
 
-## Cài đặt
+# Installation
 
-1. **Clone repository về máy**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/HXSang/Yolov11_ObjectDetection.git
    cd Yolov11_ObjectDetection
    ```
 
-2. **Cài đặt các thư viện cần thiết**:
-   Sử dụng `pip` để cài đặt các thư viện:
+2. **Install the required libraries**:
+   Use `pip` to install the necessary packages:
    ```bash
    pip install opencv-python ultralytics supervision
-   pip install requirements.txt
+   pip install -r requirements.txt
    ```
 
-3. **Chuẩn bị mô hình YOLO**:
-   - Tải mô hình YOLO đã huấn luyện (`yolo11m_trained.pt`) và đặt vào thư mục dự án.
+3. **Prepare the YOLO model**:
+   - Download the pre-trained YOLO model (`yolo11m_trained.pt`) and place it in the project folder.
 
-## Cách sử dụng
+# Usage
 
-- Đặt ảnh đầu vào trong thư mục `data/`.
-- Chạy tệp `main.py` để bắt đầu xử lý và lưu ảnh kết quả vào thư mục `images/`.
+- Place input images in the `data/` folder.
+- Run the `main.py` file to start processing and save the output images in the `images/` folder.
 
 ```bash
 python main.py
 ```
 
-## Chi tiết mã nguồn
+# Code Details
 
-- **Tải mô hình YOLO**: Sử dụng mô hình YOLO đã huấn luyện để phát hiện đối tượng.
-- **Vẽ bounding box và nhãn**: Sử dụng OpenCV để vẽ bounding box với các màu sắc khác nhau dựa trên lớp đối tượng, và thêm nhãn cho từng đối tượng với chỉ số độ tin cậy.
-- **Xử lý hàng loạt**: Duyệt qua từng ảnh trong thư mục đầu vào, xử lý và lưu ảnh sau khi đã thêm chú thích vào thư mục đầu ra.
+- **Load YOLO Model**: Use the pre-trained YOLO model for object detection.
+- **Draw Bounding Boxes and Labels**: Use OpenCV to draw bounding boxes with different colors based on the object class and add labels for each detected object with confidence scores.
+- **Batch Processing**: Iterate through each image in the input folder, process it, and save the annotated image to the output folder.
 
-## Kết quả
-Mã sẽ xuất ra các thống kê về số lượng ảnh đã xử lý thành công và số lượng ảnh gặp lỗi trong quá trình phát hiện.
+# Results
+Model Summary
 
-## Đóng góp
-Mọi đóng góp đều được chào đón! Vui lòng tạo Pull Request hoặc mở Issue nếu bạn muốn góp ý hoặc thêm chức năng.
+- Architecture: YOLOv11m (fused)
+- Layers: 303
+- Parameters: 20,033,887
+- GFLOPs: 67.7
+- Gradients: 0
+- Performance Metrics
+
+| Class | Images | Instances | Box Precision (P) | Recall (R) | mAP50 | mAP50-95 |
+|-------|--------|-----------|--------------------|------------|-------|----------|
+| All   | 840    | 7961      | 0.991              | 0.989      | 0.993 | 0.751    |
+| 0     | 793    | 1589      | 0.975              | 0.955      | 0.991 | 0.738    |
+| 1     | 749    | 1265      | 0.994              | 0.996      | 0.993 | 0.781    |
+| 2     | 791    | 1960      | 0.991              | 0.998      | 0.992 | 0.741    |
+| 3     | 774    | 1713      | 0.999              | 0.999      | 0.995 | 0.744    |
+| 4     | 683    | 1434      | 0.996              | 0.997      | 0.994 | 0.751    |
+
+
+Inference Speed
+- Preprocessing Time: 0.2 ms
+- Inference Time: 12.0 ms
+- Loss Calculation Time: 0.0 ms
+- Postprocessing Time: 1.1 ms per image
+
+# Contributions
+All contributions are welcome! Please feel free to open a Pull Request or create an Issue if you'd like to suggest enhancements or add features.
