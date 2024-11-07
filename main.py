@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import supervision as sv
 
 # Tải model YOLO
-model = YOLO("./yolo11m_trained.pt")
+model = YOLO("./model/yolo11m_trained.pt")
 
 COLORS = [
     (255, 0, 0),    
